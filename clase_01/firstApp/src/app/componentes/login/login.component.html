@@ -1,0 +1,16 @@
+<form class="row" (ngSubmit)="checkLogin()">
+
+  <input type="text"
+    [(ngModel)]="user.name"
+    name="name"
+    class="form-control mb-2" placeholder="Escriba el nombre">
+
+  <input type="text"
+    [(ngModel)]="user.password"
+    name="password"
+    class="form-control mb-2" placeholder="Escriba la contraseña">
+
+  <button type="submit" class="btn btn-primary mx-2">
+    Login
+  </button>
+</form>

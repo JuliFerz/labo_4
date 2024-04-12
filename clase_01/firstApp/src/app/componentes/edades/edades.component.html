@@ -1,0 +1,29 @@
+<input type="number"
+  name="edadUno"
+  class="form-control mb-2 col-sm-2 input-group-addon"
+  [(ngModel)]="edadUno"
+  placeholder="Primera edad">
+<input type="number"
+  name="edadDos"
+  class="form-control mb-2 input-group-addon"
+  [(ngModel)]="edadDos"
+  placeholder="Segunda edad">
+
+<button class="btn btn-primary mx-2" (click)="calcularPromedioSuma()">Calcular</button>
+<button class="btn btn-primary mx-2" (click)="limpiar()">Limpiar</button>
+
+@if(mostrarResults){
+  <hr>
+  <ng-container>
+    Suma de edades:
+    <input type="number"
+      disabled
+      class="form-control mb-2 col-sm-2"
+      [(ngModel)]="edadTotal">
+    Promedio de edades:
+    <input type="number"
+      disabled
+      class="form-control mb-2"
+      [(ngModel)]="edadPromedio">
+  </ng-container>
+}
